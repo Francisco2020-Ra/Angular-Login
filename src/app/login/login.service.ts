@@ -23,8 +23,19 @@ export class LoginService {
                 }));
     }
 
-
     getIdToken(){
         return this.token;
+    }
+
+    estaLogueado(){
+        console.log(this.token);
+        return this.token;
+    }
+
+    logout(){
+        firebase.auth().signOut().then(()=>{
+            this.token = ""
+            this.router.navigate(['/'])
+        });
     }
 }
