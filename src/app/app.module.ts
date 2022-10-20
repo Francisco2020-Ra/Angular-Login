@@ -14,14 +14,14 @@ import { ProyectosComponentComponent } from './proyectos-component/proyectos-com
 import { QuienesComponentComponent } from './quienes-component/quienes-component.component';
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
+import { LoginComponent } from './login/login.component';
 
 
 import { DataService } from './data.service';
 import { EmpleadoService } from './empleado.service';
 import { ServicioEmpleadoService } from './servicio-empleado.service';
-import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
-
+import { CookieService } from 'ngx-cookie-service';
 
 const appRoutes: Routes = [
 
@@ -55,7 +55,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [ServicioEmpleadoService, EmpleadoService, DataService, LoginService],
+  providers: [ServicioEmpleadoService, EmpleadoService, DataService, LoginService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
