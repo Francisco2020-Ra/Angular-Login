@@ -19,6 +19,7 @@ import { ErrorPersonalizadoComponent } from './error-personalizado/error-persona
 import { DataService } from './data.service';
 import { EmpleadoService } from './empleado.service';
 import { ServicioEmpleadoService } from './servicio-empleado.service';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'quienes', component: QuienesComponentComponent },
   { path: 'contacto', component: ContactoComponentComponent },
   { path: 'actualiza/:id', component: ActualizaComponentComponent },
+  { path: "login", component: LoginComponent },
   { path: '**', component: ErrorPersonalizadoComponent }
 
 ]
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     ProyectosComponentComponent,
     QuienesComponentComponent,
     ContactoComponentComponent,
-    ErrorPersonalizadoComponent
+    ErrorPersonalizadoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
