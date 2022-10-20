@@ -20,6 +20,7 @@ import { DataService } from './data.service';
 import { EmpleadoService } from './empleado.service';
 import { ServicioEmpleadoService } from './servicio-empleado.service';
 import { LoginComponent } from './login/login.component';
+import { LoginService } from './login/login.service';
 
 
 const appRoutes: Routes = [
@@ -54,7 +55,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [ServicioEmpleadoService, EmpleadoService, DataService],
+  providers: [ServicioEmpleadoService, EmpleadoService, DataService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
